@@ -12,20 +12,27 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo" aria-label="MandiMeter home">MandiMeter</a>
-      <p class="tagline">Know Local Prices Before You Buy</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-brand" aria-label="MandiMeter home">
+        <span class="logo">MandiMeter</span>
+        <span class="tagline">Know Local Prices Before You Buy</span>
+      </a>
+      <nav class="header-nav" aria-label="Legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
     </div>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container">
+        <p class="hero-badge">Now in Jamshedpur</p>
         <h1 id="hero-heading">See Today's Market Prices in Your Area</h1>
         <p class="subheadline">MandiMeter shows real prices paid by people in your locality. No guessing. No overpaying.</p>
         <div class="hero-cta">
-          <a href="#download" class="btn btn--primary">Download on Android</a>
+          <a href="#download" class="btn btn--primary js-download" data-download>Download on Android</a>
           <a href="#community" class="btn btn--secondary">Join the Community</a>
         </div>
         <div class="mockup" aria-hidden="true">
@@ -106,9 +113,11 @@
 
     <section class="trust" aria-labelledby="trust-heading">
       <div class="container">
-        <h2 id="trust-heading">Built for Transparency</h2>
-        <p class="section-intro">MandiMeter does not sell products. We do not promote shops. We simply show prices reported by real users in your area.</p>
-        <p class="disclaimer">Prices are community-submitted and updated daily.</p>
+        <div class="trust-card">
+          <h2 id="trust-heading">Built for Transparency</h2>
+          <p class="section-intro">MandiMeter does not sell products. We do not promote shops. We simply show prices reported by real users in your area.</p>
+          <p class="disclaimer">Prices are community-submitted and updated daily.</p>
+        </div>
       </div>
     </section>
 
@@ -116,7 +125,7 @@
       <div class="container">
         <h2 id="launch-heading">Starting with Jamshedpur</h2>
         <p class="section-intro">We're launching in Jamshedpur first. Help us build the most accurate local price network in India.</p>
-        <a href="#download" class="btn btn--secondary launch-cta" id="community">Be an Early Contributor</a>
+        <a href="#download" class="btn btn--secondary launch-cta js-download" id="community" data-download>Be an Early Contributor</a>
       </div>
     </section>
 
@@ -150,15 +159,21 @@
 
     <section class="final-cta" id="download" aria-labelledby="final-heading">
       <div class="container">
-        <h2 id="final-heading">Stop Guessing Market Prices</h2>
-        <a href="#" class="btn btn--primary">Download MandiMeter</a>
-        <p class="subtext">Available on Android.</p>
+        <div class="final-cta-inner">
+          <h2 id="final-heading">Stop Guessing Market Prices</h2>
+          <a href="#download" class="btn btn--primary btn--large js-download" data-download>Download MandiMeter</a>
+          <p class="subtext">Available on Android.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">MandiMeter</a>
+        <p class="footer-tagline">Know Local Prices Before You Buy</p>
+      </div>
       <nav class="footer-links" aria-label="Footer">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy Policy</a>
@@ -168,5 +183,52 @@
       <p class="footer-email">Email: <a href="mailto:support@mandimeter.in">support@mandimeter.in</a></p>
     </div>
   </footer>
+
+  <div class="coming-soon-overlay" id="coming-soon" role="dialog" aria-modal="true" aria-labelledby="coming-soon-title" aria-hidden="true">
+    <div class="coming-soon-backdrop js-coming-soon-close"></div>
+    <div class="coming-soon-card">
+      <button type="button" class="coming-soon-close js-coming-soon-close" aria-label="Close">×</button>
+      <p class="coming-soon-badge">Coming to Jamshedpur</p>
+      <h2 class="coming-soon-title" id="coming-soon-title">We're almost there</h2>
+      <p class="coming-soon-text">MandiMeter is getting ready for you. We're putting the finishing touches on the app so you can start tracking local prices soon.</p>
+      <p class="coming-soon-cta">Stay tuned — we'll be live shortly.</p>
+      <button type="button" class="btn btn--primary js-coming-soon-close">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var overlay = document.getElementById('coming-soon');
+      var triggers = document.querySelectorAll('.js-download');
+      var closers = document.querySelectorAll('.js-coming-soon-close');
+
+      function openOverlay() {
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeOverlay() {
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      triggers.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          openOverlay();
+        });
+      });
+      closers.forEach(function(el) {
+        el.addEventListener('click', closeOverlay);
+      });
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) closeOverlay();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeOverlay();
+      });
+    })();
+  </script>
 </body>
 </html>
