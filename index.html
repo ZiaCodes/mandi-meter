@@ -8,29 +8,69 @@
   <meta name="description"
     content="Check today's vegetable, milk, egg and service prices in your area with MandiMeter. Community-powered local price tracking app.">
   <meta name="keywords"
-    content="local mandi prices, Jamshedpur vegetable rates, market price today, hyperlocal price app, mandi rate app India">
+    content="local mandi prices, Jamshedpur vegetable rates, market price today, hyperlocal price app, mandi rate app India, vegetable price Jamshedpur, mandi rates today">
+  <link rel="canonical" href="https://mandimeter.com/">
   <!-- Open Graph / WhatsApp & Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mandimeter.com/">
+  <meta property="og:site_name" content="MandiMeter">
   <meta property="og:title" content="MandiMeter – Local Market Price Tracker in Jamshedpur">
   <meta property="og:description"
     content="Check today's real local prices for vegetables, milk, eggs &amp; more. Community-powered price tracker for Jamshedpur.">
-  <meta property="og:image" content="https://mandimeter.com/og-image.png">
+  <meta property="og:image" content="https://mandimeter.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MandiMeter – Local market price tracker for Jamshedpur. Know today's vegetable and essential prices in your area.">
   <meta property="og:locale" content="en_IN">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MandiMeter – Local Market Price Tracker in Jamshedpur">
   <meta name="twitter:description"
     content="Check today's real local prices for vegetables, milk, eggs &amp; more. Community-powered price tracker.">
-  <meta name="twitter:image" content="https://mandimeter.com/og-image.png">
+  <meta name="twitter:image" content="https://mandimeter.com/assets/og-image.png">
+  <meta name="theme-color" content="#2d7a4f">
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mandimeter.com/#organization",
+        "name": "MandiMeter",
+        "url": "https://mandimeter.com",
+        "description": "Community-powered local market price tracker for Jamshedpur. Know today's vegetable, milk and essential prices in your area.",
+        "email": "support@mandimeter.in",
+        "areaServed": { "@type": "City", "name": "Jamshedpur", "containedInPlace": { "@type": "State", "name": "Jharkhand" } }
+      },
+      {
+        "@type": "WebSite",
+        "name": "MandiMeter",
+        "url": "https://mandimeter.com",
+        "description": "Local market price tracker for Jamshedpur. See today's prices reported by your community.",
+        "publisher": { "@id": "https://mandimeter.com/#organization" },
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is this free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. MandiMeter is free to use." } },
+          { "@type": "Question", "name": "Do I need to create an account?", "acceptedAnswer": { "@type": "Answer", "text": "No login required." } },
+          { "@type": "Question", "name": "Are prices verified?", "acceptedAnswer": { "@type": "Answer", "text": "Prices are submitted by real users in your area." } },
+          { "@type": "Question", "name": "Does MandiMeter sell products?", "acceptedAnswer": { "@type": "Answer", "text": "No. We only display reported prices." } },
+          { "@type": "Question", "name": "Is my data safe?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We do not collect personal data." } }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="css/styles.css" as="style">
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -392,77 +432,7 @@
     </div>
   </div>
 
-  <script>
-    (function () {
-      var overlay = document.getElementById('coming-soon');
-      var triggers = document.querySelectorAll('.js-download');
-      var closers = document.querySelectorAll('.js-coming-soon-close');
-
-      function openOverlay() {
-        overlay.classList.add('is-open');
-        overlay.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeOverlay() {
-        overlay.classList.remove('is-open');
-        overlay.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-
-      triggers.forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          openOverlay();
-        });
-      });
-      closers.forEach(function (el) {
-        el.addEventListener('click', closeOverlay);
-      });
-      overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) closeOverlay();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeOverlay();
-      });
-    })();
-
-    (function () {
-      var btn = document.querySelector('.js-menu-toggle');
-      var nav = document.getElementById('header-nav');
-      var header = document.querySelector('.site-header');
-      if (!btn || !nav) return;
-      btn.addEventListener('click', function () {
-        var open = header.classList.toggle('menu-open');
-        btn.setAttribute('aria-expanded', open);
-        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      });
-      nav.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          header.classList.remove('menu-open');
-          btn.setAttribute('aria-expanded', 'false');
-          btn.setAttribute('aria-label', 'Open menu');
-        });
-      });
-    })();
-
-    (function () {
-      var rotator = document.querySelector('.social-proof-rotator');
-      if (!rotator) return;
-      var items = rotator.querySelectorAll('.social-proof-item');
-      var dots = rotator.querySelectorAll('.social-proof-dot');
-      if (items.length <= 1) return;
-      var index = 0;
-      var intervalMs = 15 * 1000;
-      function showNext() {
-        items[index].classList.remove('is-visible');
-        if (dots[index]) dots[index].classList.remove('is-active');
-        index = (index + 1) % items.length;
-        items[index].classList.add('is-visible');
-        if (dots[index]) dots[index].classList.add('is-active');
-      }
-      setInterval(showNext, intervalMs);
-    })();
-  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

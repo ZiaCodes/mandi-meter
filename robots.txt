@@ -1,0 +1,5 @@
+# MandiMeter – https://mandimeter.com
+User-agent: *
+Allow: /
+
+Sitemap: https://mandimeter.com/sitemap.xml
