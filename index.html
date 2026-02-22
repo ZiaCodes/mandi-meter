@@ -166,59 +166,102 @@
 
     <section class="problem" aria-labelledby="problem-heading">
       <div class="container">
-        <h2 id="problem-heading">Why People Overpay</h2>
-        <ul>
-          <li>No transparency in local markets</li>
-          <li>Prices change daily</li>
-          <li>Different rates in different areas</li>
-          <li>No easy way to compare</li>
-        </ul>
-        <p class="closing">MandiMeter fixes this with real, community-powered data.</p>
+        <div class="problem-card">
+          <h2 id="problem-heading">Why People Overpay</h2>
+          <p class="problem-intro">Local markets are opaque. Here’s what gets in the way.</p>
+          <ul class="problem-list">
+            <li>
+              <span class="problem-list-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+              No transparency in local markets
+            </li>
+            <li>
+              <span class="problem-list-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+              Prices change daily
+            </li>
+            <li>
+              <span class="problem-list-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              Different rates in different areas
+            </li>
+            <li>
+              <span class="problem-list-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+              No easy way to compare
+            </li>
+          </ul>
+          <p class="problem-closing">MandiMeter fixes this with real, community-powered data.</p>
+        </div>
       </div>
     </section>
 
     <section class="social-proof" aria-labelledby="social-proof-heading">
       <div class="container">
-        <h2 id="social-proof-heading" class="sr-only">What people say</h2>
-        <blockquote class="testimonial">
-          <p class="testimonial-text">"Saved me ₹15 on groceries in Sakchi today!"</p>
-          <footer class="testimonial-author">— Local user, Jamshedpur</footer>
-        </blockquote>
+        <h2 id="social-proof-heading" class="social-proof-heading">What people say</h2>
+        <div class="social-proof-card">
+          <div class="social-proof-quotes social-proof-rotator">
+            <div class="social-proof-rotator-inner">
+              <blockquote class="social-proof-item is-visible">
+                <span class="social-proof-quote-mark" aria-hidden="true">"</span>
+                <p class="social-proof-text">Saved me ₹15 on groceries in Sakchi today!</p>
+                <footer class="social-proof-author">Local user, Jamshedpur</footer>
+              </blockquote>
+              <blockquote class="social-proof-item">
+                <span class="social-proof-quote-mark" aria-hidden="true">"</span>
+                <p class="social-proof-text">Finally know what to pay for veggies in Bistupur.</p>
+                <footer class="social-proof-author">Local user, Jamshedpur</footer>
+              </blockquote>
+              <blockquote class="social-proof-item">
+                <span class="social-proof-quote-mark" aria-hidden="true">"</span>
+                <p class="social-proof-text">Shared prices from Kadma — helps the whole area.</p>
+                <footer class="social-proof-author">Local user, Jamshedpur</footer>
+              </blockquote>
+            </div>
+            <div class="social-proof-footer">
+              <div class="social-proof-indicators" aria-hidden="true">
+                <span class="social-proof-dot is-active" title="Testimonial 1"></span>
+                <span class="social-proof-dot" title="Testimonial 2"></span>
+                <span class="social-proof-dot" title="Testimonial 3"></span>
+              </div>
+            </div>
+          </div>
+          <div class="social-proof-join-wrap">
+            <svg class="social-proof-join-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <p class="social-proof-join">Join <strong>500+</strong> people in Jamshedpur</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="how-it-works" aria-labelledby="how-heading">
       <div class="container container--wide">
-        <h2 id="how-heading">How It Works</h2>
+        <div class="how-header">
+          <h2 id="how-heading">How It Works</h2>
+          <p class="how-intro">Three steps to know local prices.</p>
+        </div>
         <div class="steps">
           <div class="step">
-            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg></div>
-            <h3>Select your area</h3>
-            <p>Choose your locality in Jamshedpur</p>
+            <span class="step-num" aria-hidden="true">1</span>
+            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="step-body">
+              <h3>Select your area</h3>
+              <p>Choose your locality in Jamshedpur</p>
+            </div>
           </div>
+          <div class="step-connector" aria-hidden="true"></div>
           <div class="step">
-            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M3 3v18h18" />
-                <path d="M7 16v-5h4v5" />
-                <path d="M14 16V9h4v7" />
-              </svg></div>
-            <h3>See average prices</h3>
-            <p>View prices from real users near you</p>
+            <span class="step-num" aria-hidden="true">2</span>
+            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 16v-5h4v5"/><path d="M14 16V9h4v7"/></svg></div>
+            <div class="step-body">
+              <h3>See average prices</h3>
+              <p>View prices from real users near you</p>
+            </div>
           </div>
+          <div class="step-connector" aria-hidden="true"></div>
           <div class="step">
-            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="17 8 12 3 7 8" />
-                <line x1="12" y1="3" x2="12" y2="15" />
-              </svg></div>
-            <h3>Submit prices</h3>
-            <p>Help your community by sharing what you paid</p>
+            <span class="step-num" aria-hidden="true">3</span>
+            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+            <div class="step-body">
+              <h3>Submit prices</h3>
+              <p>Help your community by sharing what you paid</p>
+            </div>
           </div>
         </div>
       </div>
@@ -226,46 +269,35 @@
 
     <section class="features-section" aria-labelledby="features-heading">
       <div class="container container--wide">
-        <h2 id="features-heading" class="section-title">Features</h2>
+        <div class="features-header">
+          <h2 id="features-heading">Features</h2>
+          <p class="features-intro">Everything you need to shop smarter, locally.</p>
+        </div>
         <div class="features-grid">
-          <div class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M3 3v18h18" />
-                <path d="M7 16v-5h4v5" />
-                <path d="M14 16V9h4v7" />
-              </svg></div>
+          <article class="feature feature--highlight">
+            <div class="feature-accent"></div>
+            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 16v-5h4v5"/><path d="M14 16V9h4v7"/></svg></div>
             <h3>Real-Time Local Prices</h3>
             <p>See what people near you paid today.</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg></div>
+          </article>
+          <article class="feature">
+            <div class="feature-accent"></div>
+            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <h3>Hyperlocal Areas</h3>
             <p>Sakchi, Bistupur, Kadma, Mango & more.</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="4" />
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-              </svg></div>
+          </article>
+          <article class="feature">
+            <div class="feature-accent"></div>
+            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <h3>Community Powered</h3>
             <p>Built by locals, for locals.</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg></div>
+          </article>
+          <article class="feature">
+            <div class="feature-accent"></div>
+            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <h3>Simple & Fast</h3>
             <p>No login. No clutter. Just prices.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -411,6 +443,24 @@
           btn.setAttribute('aria-label', 'Open menu');
         });
       });
+    })();
+
+    (function () {
+      var rotator = document.querySelector('.social-proof-rotator');
+      if (!rotator) return;
+      var items = rotator.querySelectorAll('.social-proof-item');
+      var dots = rotator.querySelectorAll('.social-proof-dot');
+      if (items.length <= 1) return;
+      var index = 0;
+      var intervalMs = 15 * 1000;
+      function showNext() {
+        items[index].classList.remove('is-visible');
+        if (dots[index]) dots[index].classList.remove('is-active');
+        index = (index + 1) % items.length;
+        items[index].classList.add('is-visible');
+        if (dots[index]) dots[index].classList.add('is-active');
+      }
+      setInterval(showNext, intervalMs);
     })();
   </script>
 </body>
