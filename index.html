@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MandiMeter – Local Market Price Tracker in Jamshedpur</title>
-  <meta name="description" content="Check today's vegetable, milk, egg and service prices in your area with MandiMeter. Community-powered local price tracking app.">
-  <meta name="keywords" content="local mandi prices, Jamshedpur vegetable rates, market price today, hyperlocal price app, mandi rate app India">
+  <meta name="description"
+    content="Check today's vegetable, milk, egg and service prices in your area with MandiMeter. Community-powered local price tracking app.">
+  <meta name="keywords"
+    content="local mandi prices, Jamshedpur vegetable rates, market price today, hyperlocal price app, mandi rate app India">
+  <!-- Open Graph / WhatsApp & Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mandimeter.com/">
+  <meta property="og:title" content="MandiMeter – Local Market Price Tracker in Jamshedpur">
+  <meta property="og:description"
+    content="Check today's real local prices for vegetables, milk, eggs &amp; more. Community-powered price tracker for Jamshedpur.">
+  <meta property="og:image" content="https://mandimeter.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_IN">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MandiMeter – Local Market Price Tracker in Jamshedpur">
+  <meta name="twitter:description"
+    content="Check today's real local prices for vegetables, milk, eggs &amp; more. Community-powered price tracker.">
+  <meta name="twitter:image" content="https://mandimeter.com/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -18,9 +40,15 @@
         <span class="logo">MandiMeter</span>
         <span class="tagline">Know Local Prices Before You Buy</span>
       </a>
-      <nav class="header-nav" aria-label="Legal">
+      <button type="button" class="header-menu-btn js-menu-toggle" aria-label="Open menu" aria-expanded="false"
+        aria-controls="header-nav">
+        <span class="header-menu-icon"></span>
+      </button>
+      <nav class="header-nav" id="header-nav" aria-label="Legal">
+        <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
+        <a href="mailto:support@mandimeter.in">Contact</a>
       </nav>
     </div>
   </header>
@@ -30,19 +58,108 @@
       <div class="container">
         <p class="hero-badge">Now in Jamshedpur</p>
         <h1 id="hero-heading">See Today's Market Prices in Your Area</h1>
-        <p class="subheadline">MandiMeter shows real prices paid by people in your locality. No guessing. No overpaying.</p>
+        <p class="subheadline">See what people in your area paid — today. No guessing. No overpaying.</p>
         <div class="hero-cta">
-          <a href="#download" class="btn btn--primary js-download" data-download>Download on Android</a>
-          <a href="#community" class="btn btn--secondary">Join the Community</a>
+          <span class="hero-cta-primary">
+            <a href="#download" class="btn btn--primary js-download" data-download>Download on Android</a>
+            <span class="hero-cta-note">Play Store coming soon</span>
+          </span>
+          <a href="#community" class="btn btn--secondary">Submit Prices — Help Your Community</a>
         </div>
-        <div class="mockup" aria-hidden="true">
-          <div class="mockup-title">Today's prices</div>
-          <ul class="mockup-list">
-            <li><span>Onion</span> <span class="price">₹28/kg</span></li>
-            <li><span>Milk</span> <span class="price">₹54/litre</span></li>
-            <li><span>Eggs</span> <span class="price">₹6 each</span></li>
-          </ul>
-          <p class="mockup-footer">Based on 23 reports today</p>
+        <div class="mockup-phones-stack" aria-hidden="true">
+          <div class="mockup-phone-slice mockup-phone-slice--left">
+            <div class="mockup-phone">
+              <div class="mockup-phone-frame">
+                <div class="mockup-phone-notch"></div>
+                <div class="mockup">
+                  <header class="mockup-appbar">
+                    <div class="mockup-appbar-brand"><span class="mockup-appbar-title">MandiMeter</span><span
+                        class="mockup-appbar-tagline">Know Local Prices Before You Buy</span></div>
+                    <span class="mockup-appbar-area">Sakchi</span>
+                  </header>
+                  <div class="mockup-screen">
+                    <p class="mockup-title">Today's prices</p>
+                    <ul class="mockup-list">
+                      <li><span>Onion</span> <span class="mockup-item-right"><span class="price">₹28/kg</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 8 users</span></span></li>
+                      <li><span>Milk</span> <span class="mockup-item-right"><span class="price">₹54/litre</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 7 users</span></span></li>
+                      <li><span>Eggs</span> <span class="mockup-item-right"><span class="price">₹6 each</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 6 users</span></span></li>
+                      <li><span>Tomato</span> <span class="mockup-item-right"><span class="price">₹40/kg</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 7 users</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-phone-slice mockup-phone-slice--center">
+            <div class="mockup-phone">
+              <div class="mockup-phone-frame">
+                <div class="mockup-phone-notch"></div>
+                <div class="mockup">
+                  <header class="mockup-appbar">
+                    <div class="mockup-appbar-brand"><span class="mockup-appbar-title">MandiMeter</span><span
+                        class="mockup-appbar-tagline">Know Local Prices Before You Buy</span></div>
+                    <span class="mockup-appbar-area">Bistupur</span>
+                  </header>
+                  <div class="mockup-screen">
+                    <p class="mockup-title">Today's prices</p>
+                    <ul class="mockup-list">
+                      <li><span>Onion</span> <span class="mockup-item-right"><span class="price">₹30/kg</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 9 users</span></span></li>
+                      <li><span>Milk</span> <span class="mockup-item-right"><span class="price">₹56/litre</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 8 users</span></span></li>
+                      <li><span>Eggs</span> <span class="mockup-item-right"><span class="price">₹6 each</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 7 users</span></span></li>
+                      <li><span>Potato</span> <span class="mockup-item-right"><span class="price">₹22/kg</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 7 users</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-phone-slice mockup-phone-slice--right">
+            <div class="mockup-phone">
+              <div class="mockup-phone-frame">
+                <div class="mockup-phone-notch"></div>
+                <div class="mockup">
+                  <header class="mockup-appbar">
+                    <div class="mockup-appbar-brand"><span class="mockup-appbar-title">MandiMeter</span><span
+                        class="mockup-appbar-tagline">Know Local Prices Before You Buy</span></div>
+                    <span class="mockup-appbar-area">Kadma</span>
+                  </header>
+                  <div class="mockup-screen">
+                    <p class="mockup-title">Today's prices</p>
+                    <ul class="mockup-list">
+                      <li><span>Onion</span> <span class="mockup-item-right"><span class="price">₹26/kg</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 6 users</span></span></li>
+                      <li><span>Milk</span> <span class="mockup-item-right"><span class="price">₹52/litre</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 7 users</span></span></li>
+                      <li><span>Eggs</span> <span class="mockup-item-right"><span class="price">₹5.50 each</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 5 users</span></span></li>
+                      <li><span>Brinjal</span> <span class="mockup-item-right"><span class="price">₹35/kg</span><span
+                            class="mockup-item-reports"><span class="mockup-icon-person"
+                              aria-hidden="true"></span>reported by 6 users</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -60,22 +177,46 @@
       </div>
     </section>
 
+    <section class="social-proof" aria-labelledby="social-proof-heading">
+      <div class="container">
+        <h2 id="social-proof-heading" class="sr-only">What people say</h2>
+        <blockquote class="testimonial">
+          <p class="testimonial-text">"Saved me ₹15 on groceries in Sakchi today!"</p>
+          <footer class="testimonial-author">— Local user, Jamshedpur</footer>
+        </blockquote>
+      </div>
+    </section>
+
     <section class="how-it-works" aria-labelledby="how-heading">
       <div class="container container--wide">
         <h2 id="how-heading">How It Works</h2>
         <div class="steps">
           <div class="step">
-            <div class="step-icon" aria-hidden="true">1</div>
+            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
             <h3>Select your area</h3>
             <p>Choose your locality in Jamshedpur</p>
           </div>
           <div class="step">
-            <div class="step-icon" aria-hidden="true">2</div>
+            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M3 3v18h18" />
+                <path d="M7 16v-5h4v5" />
+                <path d="M14 16V9h4v7" />
+              </svg></div>
             <h3>See average prices</h3>
             <p>View prices from real users near you</p>
           </div>
           <div class="step">
-            <div class="step-icon" aria-hidden="true">3</div>
+            <div class="step-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="17 8 12 3 7 8" />
+                <line x1="12" y1="3" x2="12" y2="15" />
+              </svg></div>
             <h3>Submit prices</h3>
             <p>Help your community by sharing what you paid</p>
           </div>
@@ -88,22 +229,40 @@
         <h2 id="features-heading" class="section-title">Features</h2>
         <div class="features-grid">
           <div class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 16v-5h4v5"/><path d="M14 16V9h4v7"/></svg></div>
+            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M3 3v18h18" />
+                <path d="M7 16v-5h4v5" />
+                <path d="M14 16V9h4v7" />
+              </svg></div>
             <h3>Real-Time Local Prices</h3>
             <p>See what people near you paid today.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></div>
             <h3>Hyperlocal Areas</h3>
             <p>Sakchi, Bistupur, Kadma, Mango & more.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg></div>
             <h3>Community Powered</h3>
             <p>Built by locals, for locals.</p>
           </div>
           <div class="feature">
-            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <div class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg></div>
             <h3>Simple & Fast</h3>
             <p>No login. No clutter. Just prices.</p>
           </div>
@@ -115,7 +274,8 @@
       <div class="container">
         <div class="trust-card">
           <h2 id="trust-heading">Built for Transparency</h2>
-          <p class="section-intro">MandiMeter does not sell products. We do not promote shops. We simply show prices reported by real users in your area.</p>
+          <p class="section-intro">MandiMeter does not sell products. We do not promote shops. We simply show prices
+            reported by real users in your area.</p>
           <p class="disclaimer">Prices are community-submitted and updated daily.</p>
         </div>
       </div>
@@ -124,8 +284,10 @@
     <section class="launch" aria-labelledby="launch-heading">
       <div class="container">
         <h2 id="launch-heading">Starting with Jamshedpur</h2>
-        <p class="section-intro">We're launching in Jamshedpur first. Help us build the most accurate local price network in India.</p>
-        <a href="#download" class="btn btn--secondary launch-cta js-download" id="community" data-download>Be an Early Contributor</a>
+        <p class="section-intro">We're launching in Jamshedpur first. Help us build the most accurate local price
+          network in India.</p>
+        <a href="#download" class="btn btn--secondary launch-cta js-download" id="community" data-download>Be an Early
+          Contributor — Get Notified</a>
       </div>
     </section>
 
@@ -184,20 +346,22 @@
     </div>
   </footer>
 
-  <div class="coming-soon-overlay" id="coming-soon" role="dialog" aria-modal="true" aria-labelledby="coming-soon-title" aria-hidden="true">
+  <div class="coming-soon-overlay" id="coming-soon" role="dialog" aria-modal="true" aria-labelledby="coming-soon-title"
+    aria-hidden="true">
     <div class="coming-soon-backdrop js-coming-soon-close"></div>
     <div class="coming-soon-card">
       <button type="button" class="coming-soon-close js-coming-soon-close" aria-label="Close">×</button>
       <p class="coming-soon-badge">Coming to Jamshedpur</p>
       <h2 class="coming-soon-title" id="coming-soon-title">We're almost there</h2>
-      <p class="coming-soon-text">MandiMeter is getting ready for you. We're putting the finishing touches on the app so you can start tracking local prices soon.</p>
+      <p class="coming-soon-text">MandiMeter is getting ready for you. We're putting the finishing touches on the app so
+        you can start tracking local prices soon.</p>
       <p class="coming-soon-cta">Stay tuned — we'll be live shortly.</p>
       <button type="button" class="btn btn--primary js-coming-soon-close">Got it</button>
     </div>
   </div>
 
   <script>
-    (function() {
+    (function () {
       var overlay = document.getElementById('coming-soon');
       var triggers = document.querySelectorAll('.js-download');
       var closers = document.querySelectorAll('.js-coming-soon-close');
@@ -213,22 +377,42 @@
         document.body.style.overflow = '';
       }
 
-      triggers.forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
+      triggers.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
           e.preventDefault();
           openOverlay();
         });
       });
-      closers.forEach(function(el) {
+      closers.forEach(function (el) {
         el.addEventListener('click', closeOverlay);
       });
-      overlay.addEventListener('click', function(e) {
+      overlay.addEventListener('click', function (e) {
         if (e.target === overlay) closeOverlay();
       });
-      document.addEventListener('keydown', function(e) {
+      document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeOverlay();
+      });
+    })();
+
+    (function () {
+      var btn = document.querySelector('.js-menu-toggle');
+      var nav = document.getElementById('header-nav');
+      var header = document.querySelector('.site-header');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = header.classList.toggle('menu-open');
+        btn.setAttribute('aria-expanded', open);
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          header.classList.remove('menu-open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open menu');
+        });
       });
     })();
   </script>
 </body>
+
 </html>
