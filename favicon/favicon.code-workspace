@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "favicon",
+			"path": "../../Downloads/favicon"
+		},
+		{
+			"name": "mandi_meter",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mandi_meter"
+	}
+}
